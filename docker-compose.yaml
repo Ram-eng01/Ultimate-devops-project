@@ -266,6 +266,7 @@ services:
       - RETAIL_UI_ENDPOINTS_CARTS=http://carts:8080
       - RETAIL_UI_ENDPOINTS_ORDERS=http://orders:8080
       - RETAIL_UI_ENDPOINTS_CHECKOUT=http://checkout:8080
+      - RETAIL_UI_THEME=green
     healthcheck:
       interval: 10s
       retries: 3
