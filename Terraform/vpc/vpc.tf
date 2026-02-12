@@ -27,7 +27,7 @@ resource "aws_internet_gateway" "igw" {
 
 # Resource-3: Public Subnets
 resource "aws_subnet" "public" {
-        for_each = { for index, az in local.local.azs : az => local.local.public_subnets[index]}
+        for_each = { for index, az in local.azs : az => local.public_subnets[index]}
             #sample map ==>result for above for each
              #  {
             #    us-east-1a = 10.0.0.0/24

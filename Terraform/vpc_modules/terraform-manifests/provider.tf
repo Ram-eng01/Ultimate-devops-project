@@ -1,3 +1,4 @@
+
 terraform {
   required_version = ">= 1.0.0"
   required_providers {
@@ -6,13 +7,14 @@ terraform {
       version = ">= 6.0"
     }
   }
+# Remote Backend
   backend "s3" {
-    bucket         = "tfstate-dev-us-east-1-msmva6" # <-- Replace with your actual bucket name
+    bucket         = "tfstate-dev-us-east-1-msmva6"
     key            = "vpc/dev/terraform.tfstate"
     region         = "us-east-1"
     encrypt        = true
-    #use_lockfile = false
-  } 
+   # use_lockfile = true
+  }   
 }
 
 provider "aws" {
