@@ -33,7 +33,9 @@ spec:
         - name: catalog
           envFrom:
             - configMapRef:
-                name: catalog        
+                name: catalog  
+            - secretRef:
+                name: catalog-db      
           securityContext:
             capabilities:
               drop:
