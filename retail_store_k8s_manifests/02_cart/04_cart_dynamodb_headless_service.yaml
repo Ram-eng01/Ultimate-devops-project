@@ -12,7 +12,7 @@ metadata:
     app.kubernetes.io/owner: retail-store-sample
     app.kubernetes.io/managed-by: Helm
 spec:
-  ClusterIP: None
+  clusterIP: None
   ports:
     - port: 8000
       targetPort: dynamodb
